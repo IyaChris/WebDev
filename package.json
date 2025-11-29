@@ -1,0 +1,33 @@
+{
+  "name": "webdev",
+  "version": "1.0.0",
+  "description": "example",
+  "homepage": "https://github.com/IyaChris/WebDev#readme",
+  "bugs": {
+    "url": "https://github.com/IyaChris/WebDev/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IyaChris/WebDev.git"
+  },
+  "license": "ISC",
+  "author": "Iyanna Christie",
+  "type": "module",
+  "main": "app.mjs",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "start": "node src/app.mjs",
+    "dev": "nodemon src/app.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "html-entities": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
