@@ -8,6 +8,7 @@ export class WeatherClient {
     static async getCurrentTemperature() {
       const data = await WeatherClient.#fetchWeatherData();
       return data?.main?.temp;
+      
     }
   
     static async #fetchWeatherData() {
