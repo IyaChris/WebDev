@@ -10,6 +10,11 @@ export class WeatherClient {
       return data?.main?.temp;
       
     }
+
+    static async getCurrentConditions() {
+      const data = await WeatherClient.#fetchWeatherData();
+      return data?.weather?.[0]?.description;      
+    }
   
     static async #fetchWeatherData() {
       const params = new URLSearchParams({

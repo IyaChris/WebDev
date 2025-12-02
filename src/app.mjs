@@ -10,11 +10,18 @@ app.get("/weather", async (req, res) => {
 
   try {
     const temp = await WeatherClient.getCurrentTemperature();
+    const description = await WeatherClient.getCurrentConditions();
+
     res.json({ temp: temp });
+    res.json({ description: description });
+
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Failed to fetch weather data" });
   }
+
+
+
 
 });
 

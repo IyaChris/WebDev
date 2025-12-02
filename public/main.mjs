@@ -13,4 +13,19 @@ console.log("Weather data:", data);
     }
 }
 
+
+
+async function loadCondition () {
+    try{
+        const res = await fetch("/weather");
+        const data = await res.json();
+console.log("Weather data:", data);
+      const description  = data.description;
+
+        document.querySelector("#description").textContent = description !==undefined ? `${description}   degrees`: "NA";
+    } catch (err) {
+        console.error("Weather error", err);
+    }
+}
 loadWeather();
+loadCondition();
