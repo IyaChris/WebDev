@@ -22,7 +22,7 @@ async function loadCondition () {
 console.log("Weather data:", data);
       const description  = data.description;
 
-        document.querySelector("#description").textContent = description !==undefined ? `${description}   degrees`: "NA";
+        document.querySelector("#description").textContent = description !==undefined ? `${description}   degrees`: "Cloudy";
     } catch (err) {
         console.error("Weather error", err);
     }
